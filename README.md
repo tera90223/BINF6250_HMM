@@ -5,8 +5,23 @@ This project implements the Forward-Backward class of Hidden Markov Model. The F
 # Pseudocode
 Put pseudocode in this box:
 
+**Foward_matrix**
+Note: This is the logic and does not reflect our exact implementation
 ```
-Some pseudocode here
+Initialize numpy array num_states x len(observations)
+
+# Base Case
+for each state:
+    Initialize initial probabilities for each current state by multiplying initial probs by emission probs
+        Add initial probabilities in log space
+
+# Recursion    
+Iterate through each observation
+    Iterate through each state    
+    Calculate joint probabilities in log space
+    Add joing probabilities in log space
+    Add to probability matrix
+
 ```
 
 # Successes
